@@ -1,0 +1,28 @@
+[project]
+name = "movie-info-agent"
+version = "0.1.0"
+description = "Get movie information from tmdb,requested by the user"
+readme = "README.md"
+requires-python = ">=3.15"
+dependencies = [
+    "groq>=0.37.1",
+    "ipykernel>=7.4.0",
+    "langchain>=1.5.0",
+    "langchain-community>=0.4.2",
+    "langchain-core>=1.8.0",
+    "langchain-groq>=1.1.3",
+    "langchain-openai>=1.7.4",
+    "python-dotenv>=1.2.4",
+]
+
+[project.scripts]
+movie-info-agent = "movie_info_agent:main"
+
+[build-system]
+requires = ["uv_build>=0.13.7,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.4.0",
+]
